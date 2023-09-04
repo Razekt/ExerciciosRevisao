@@ -21,4 +21,3 @@ namespace Exercicio2
         }
     }
 }
-//Dentro da classe Varejo, vamos incluir um private readonly EnviarNotificacaoWhatsApp que é recebido no construtor da classe.
