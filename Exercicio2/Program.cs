@@ -16,11 +16,16 @@
             listaEmpresa.Add(empresaVarejista);
             listaEmpresa.Add(empreiteira);
 
-            foreach (var item in listaEmpresa)
+            foreach (IEmpresa item in listaEmpresa)
             {
                 Console.WriteLine(item.ImprimirInfo());
-                item.RealizarVenda();
+                item.RealizarVenda();                        
             }
         }
     }
 }
+
+/*
+Dentro da classe Varejo, vamos incluir um private readonly EnviarNotificacaoWhatsApp que é recebido no construtor da classe.
+Após Realizar a venda, utilizaremos o método de EnviarNotificacao.
+*/

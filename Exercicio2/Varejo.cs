@@ -8,9 +8,17 @@ namespace Exercicio2
 {
     public class Varejo : Empresa, IEmpresa
     {
+        private readonly EnviarNotificacaoWhatsApp enviarNotificacao;
+        public Varejo()
+        {
+            enviarNotificacao = new EnviarNotificacaoWhatsApp();
+        }
+
         public void RealizarVenda()
         {
             Console.WriteLine("Vende Produto!");
+            enviarNotificacao.EnviarMensagemCliente();
         }
     }
 }
+//Dentro da classe Varejo, vamos incluir um private readonly EnviarNotificacaoWhatsApp que é recebido no construtor da classe.
